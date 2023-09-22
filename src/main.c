@@ -6,12 +6,11 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:19:43 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/22 21:24:23 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/22 22:03:12 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str);
-void	ft_putchar(char c);
+#include "rush02.h"
 
 int	main(int argc, char *argv[])
 {
@@ -24,5 +23,6 @@ int	main(int argc, char *argv[])
 		ft_putchar('\n');
 		i++;
 	}
+	ft_putstr("voila\n");
 	return (0);
 }

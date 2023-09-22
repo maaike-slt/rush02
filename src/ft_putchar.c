@@ -6,11 +6,11 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:24:33 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/22 21:25:00 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/22 22:01:01 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "rush02.h"
 
 void	ft_putchar(char c)
 {
