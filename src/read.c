@@ -6,52 +6,57 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:57:15 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/23 21:21:07 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 22:18:25 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "rush02.h"
 
-int	main(int argc, char *argv[])
+char	*malloc_buffer(void)
 {
-	(void)*argv;
-	if(argc > 0)
+	char	*buffer;
+
+	buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
+	if (!buffer)
 	{
-		int fd;
-
-		fd = open("numbers.dict", O_RDONLY); // Open file in read-only mode
-		printf("%d", fd);
-		if(fd == -1)  // Security check, if opening failed return 1
-			return (1);
-
-		// Read now
-		char buffer[100];
-		ssize_t byte_read; // 2 variables needed to use read
-		byte_read = read(fd, buffer, sizeof(buffer));
-		// Read takes the opened file, a buffer, and sizeof number of bytes 
-		// you want to read from the file
-
-		// 2nd security check error or EOF
-		if (byte_read == -1)
-		{
-			close(fd);
-			return (1);
-		}
-		else if (byte_read == 0)
-		{
-			close(fd);
-			// EOF reached
-			return (0);		
-		}
-		int i;
-
-		i = 0;
-		while(i <= 30)
-		{
-		write(1, &buffer[i], 1);
-		i++;
-		}
+		ft_put_error(0);
+		return (NULL);
 	}
+	return (buffer);
+}
+
+char	*read_error(char *buffer)
+{
+	free(buffer);
+	ft_put_error(0);
+	return (NULL);
+}
+
+char	*read_file(int fd)
+{
+	char	*ret;
+	char	*buffer;
+	ssize_t	read_ret;
+
+	buffer = malloc_buffer();
+	if (!buffer)
+		return (NULL);
+	read_ret = read(fd, buffer, BUFFER_SIZE);
+	ret = ft_strdup(buffer);
+	if (!ret)
+		return (read_error(buffer));
+	read_ret = read(fd, buffer, BUFFER_SIZE);
+	while (read_ret > 0)
+	{
+		ret = ft_strjoin_free(ret, buffer, 1, 0);
+		if (!ret)
+			return (read_error(buffer));
+		read_ret = read(fd, buffer, BUFFER_SIZE);
+	}
+	if (read_ret < 0)
+	{
+		free(ret);
+		return (read_error(buffer));
+	}
+	return (ret);
 }

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 21:20:53 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 21:54:34 by msloot           ###   ########.fr       */
+/*   Created: 2023/09/23 22:19:28 by msloot            #+#    #+#             */
+/*   Updated: 2023/09/23 22:20:47 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
-void	ft_putstr(char *str)
+char	*ft_strdup(char *src)
 {
-	write(1, str, ft_strlen(str));
-}
+	char	*ret;
 
-void	ft_putstr_error(char *str)
-{
-	write(2, str, ft_strlen(str));
+	ret = (char *)malloc(sizeof(char) * ft_strlen(src));
+	if (!ret)
+		return (NULL);
+	ft_strcpy(ret, src);
+	return (ret);
 }
