@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:57:11 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 22:21:25 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 23:52:48 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,29 @@ int			parse(int argc, char *argv[], char **nb, int *fd);
 
 char		*read_file(int fd);
 
+char		*search(char *dict, char *nb);
+char		*search_teens(char *dict, char tens, char ones);
+char		*search_big(char *dict, size_t len);
+
 long long	ft_atoll(char *str);
 
 void		ft_putstr(char *str);
 void		ft_putstr_error(char *str);
+void		ft_putstr_to_whitespace(char *str);
 void		ft_putchar(char c);
 
 int			ft_put_error(int ret);
 int			ft_put_dict_error(int ret);
 
+int			ft_is_num(char c);
+int			ft_is_whitespace(char c);
+
 size_t		ft_strlen(char *str);
+size_t		ft_strlen_to_whitespace(char *str);
 
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_strcat(char *dest, char *src);
+int			ft_strncmp(char *s1, char *s2, unsigned int n);
 
 char		*ft_strdup(char *src);
 char		*ft_strjoin(char *s1, char *s2);

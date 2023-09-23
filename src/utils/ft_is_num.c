@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_is_num.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 21:20:53 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 23:52:09 by msloot           ###   ########.fr       */
+/*   Created: 2023/09/23 23:31:05 by msloot            #+#    #+#             */
+/*   Updated: 2023/09/23 23:44:20 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
-void	ft_putstr(char *str)
+int	ft_is_num(char c)
 {
-	write(1, str, ft_strlen(str));
-}
-
-void	ft_putstr_error(char *str)
-{
-	write(2, str, ft_strlen(str));
-}
-
-void	ft_putstr_to_whitespace(char *str)
-{
-	write(1, str, ft_strlen_to_whitespace(str));
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

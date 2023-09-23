@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:57:15 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/23 22:18:25 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 23:57:24 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,8 @@ char	*read_file(int fd)
 			return (read_error(buffer));
 		read_ret = read(fd, buffer, BUFFER_SIZE);
 	}
+	free(buffer);
 	if (read_ret < 0)
-	{
-		free(ret);
-		return (read_error(buffer));
-	}
+		return (read_error(ret));
 	return (ret);
 }

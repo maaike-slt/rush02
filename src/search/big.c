@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   big.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 21:20:53 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 23:52:09 by msloot           ###   ########.fr       */
+/*   Created: 2023/09/23 23:05:10 by msloot            #+#    #+#             */
+/*   Updated: 2023/09/23 23:40:58 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
-void	ft_putstr(char *str)
+// 1000000000000000000000000000000000000 is 37 length
+char	*search_big(char *dict, size_t len)
 {
-	write(1, str, ft_strlen(str));
-}
+	char	s[38];
+	size_t	i;
 
-void	ft_putstr_error(char *str)
-{
-	write(2, str, ft_strlen(str));
-}
-
-void	ft_putstr_to_whitespace(char *str)
-{
-	write(1, str, ft_strlen_to_whitespace(str));
+	s[0] = '1';
+	i = 1;
+	while (i < len)
+	{
+		s[i] = '0';
+		i++;
+	}
+	s[i] = '\0';
+	return (search(dict, s));
 }
