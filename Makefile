@@ -6,7 +6,7 @@
 #    By: msloot <msloot@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 21:30:22 by msloot            #+#    #+#              #
-#    Updated: 2023/09/22 22:02:17 by msloot           ###   ########.fr        #
+#    Updated: 2023/09/23 13:31:13 by msloot           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ CFLAGS	=	-Wall -Werror -Wextra
 INC		=	./inc/
 
 SRCS	=	./src/main.c \
-			./src/ft_strlen.c ./src/ft_putstr.c ./src/ft_putchar.c
+			./src/ft_strlen.c ./src/ft_putstr.c ./src/ft_putchar.c ./src/error.c ./src/ft_strjoin.c
 
 OBJS	=	$(SRCS:.c=.o)
 
