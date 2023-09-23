@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:19:43 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/22 22:03:12 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 21:37:50 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 int	main(int argc, char *argv[])
 {
-	int	i;
+	char	*nb;
+	int		fd;
 
-	i = 0;
-	while (i < argc)
-	{
-		ft_putstr(argv[i]);
-		ft_putchar('\n');
-		i++;
-	}
-	ft_putstr("voila\n");
+	if (!parse(argc, argv, &nb, &fd))
+		return (1);
 	return (0);
 }

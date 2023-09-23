@@ -6,18 +6,29 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:21:00 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 15:53:19 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 21:44:54 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	parse(char *input, int n*)
-{
-	int	i;
+#include "rush02.h"
 
-	if (argc > 3)
-		return (ft_put_error());
-	if (argc < 1)
-		return (ft_put_error());
-	if (ft_atoi(argv[argc - 1][i]) < 0)
-		return (ft_put_error());
+int	parse(int argc, char *argv[], char **nb, int *fd)
+{
+	if (argc != 2 && argc != 3)
+		return (ft_put_error(0));
+	if (ft_atoll(argv[argc - 1]) < 0)
+		return (ft_put_error(0));
+	if (argc == 2)
+	{
+		*nb = argv[1];
+		*fd = open("numbers.dict", O_RDONLY);
+	}
+	else
+	{
+		*nb = argv[2];
+		*fd = open(argv[1], O_RDONLY);
+	}
+	if (*fd < 0)
+		return (ft_put_dict_error(0));
+	return (1);
 }

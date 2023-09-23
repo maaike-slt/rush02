@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 11:45:02 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 13:39:59 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 21:36:39 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int	ft_put_error(int ret)
 
 int	ft_put_dict_error(int ret)
 {
-	ft_putstr("Dict error\n");
+	ft_putstr("Dict Error\n");
 	return (ret);
 }
