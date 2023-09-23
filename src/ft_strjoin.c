@@ -6,11 +6,11 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:21:42 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 13:28:01 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 13:40:15 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02"
+#include "rush02.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {

@@ -6,11 +6,11 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 11:45:02 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 11:48:08 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/23 13:39:59 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02"
+#include "rush02.h"
 
 int	ft_put_error(int ret)
 {
