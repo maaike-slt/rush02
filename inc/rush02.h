@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:57:11 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/24 15:34:40 by ylenoel          ###   ########.fr       */
+/*   Updated: 2023/09/24 21:02:52 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@
 
 int			parse(int argc, char *argv[], char **nb, int *fd);
 
-void		convert(char *dict, char *nb);
-
 char		*read_file(int fd);
 
 char		*search(char *dict, char *nb);
@@ -30,6 +28,11 @@ char		*search_ones(char *dict, char ones);
 char		*search_teens(char *dict, char tens, char ones);
 char		*search_tens(char *dict, char tens);
 char		*search_big(char *dict, size_t len);
+
+int			convert(char *dict, char *nb, int check);
+int			convert_ones(char *dict, char c, size_t len, int check);
+int			convert_tens(char *dict, char *nb, size_t *i, int check);
+int			convert_hundreds(char *dict, char c, int check);
 
 long long	ft_atoll(char *str);
 

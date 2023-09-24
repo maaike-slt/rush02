@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ones.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/24 15:37:47 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 21:04:23 by msloot           ###   ########.fr       */
+/*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
+/*   Updated: 2023/09/24 21:03:59 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
-int	main(int argc, char *argv[])
+int	convert_ones(char *dict, char c, size_t len, int check)
 {
-	char	*dict;
-	char	*nb;
-	int		fd;
+	char	*word;
 
-	if (!parse(argc, argv, &nb, &fd))
+	word = search_ones(dict, c);
+	if (!word)
+		return (0);
+	if (!check)
+		ft_putstr_until_whitespace(word);
+	if (len == 1)
 		return (1);
-	dict = read_file(fd);
-	close(fd);
-	if (!dict)
-		return (1);
-	if (!convert(dict, nb, 1))
-	{
-		free(dict);
-		return (ft_put_dict_error(1));
-	}
-	convert(dict, nb, 0);
-	free(dict);
-	return (0);
+	word = search_big(dict, len);
+	if (!word)
+		return (0);
+	if (!check)
+		ft_putstr_until_whitespace(word);
+	return (1);
 }
