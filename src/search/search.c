@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 22:43:43 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 23:47:43 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 12:09:47 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*search(char *dict, char *nb)
 			return (word(&dict[i]));
 		while (dict[i] != '\0' && dict[i] != '\n')
 			i++;
-		if (dict[i] == '\n')
+		while (ft_is_whitespace(dict[i]))
 			i++;
 	}
 	return (NULL);
