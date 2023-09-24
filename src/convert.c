@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 18:26:15 by ylenoel          ###   ########.fr       */
+/*   Updated: 2023/09/24 18:31:30 by ylenoel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	convert(char *dict, char *nb)
 		{
 			ft_putstr_until_whitespace(search_ones(dict, nb[i]));
 			ft_putstr_until_whitespace(search_big(dict, 3));
-			i++;
 		}
 		else if (len % 3 == 2)
 		{
@@ -41,13 +40,13 @@ void	convert(char *dict, char *nb)
 				ft_putstr_until_whitespace(search_ones(dict, nb[i]));
 
 			}
-			else
-			{
-				ft_putstr_until_whitespace(search_ones(dict, nb[i]));
-				if (len > 1)
-					ft_putstr_until_whitespace(search_big(dict, len));
-			}
-		i++;
 		}
+		else
+		{
+			ft_putstr_until_whitespace(search_ones(dict, nb[i]));
+			if (len > 1)
+				ft_putstr_until_whitespace(search_big(dict, len));
+		}
+		i++;
 	}
 }
