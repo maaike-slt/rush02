@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 17:05:41 by ylenoel          ###   ########.fr       */
+/*   Updated: 2023/09/24 17:50:12 by ylenoel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	convert(char *dict, char *nb)
 {
 	size_t	i;
+	size_t	len;
 
 	i = 0;
 	while (nb[i] != 0)
@@ -40,6 +41,9 @@ void	convert(char *dict, char *nb)
 		{
 			ft_putstr_until_whitespace(search_ones(dict, nb[i]));
 		}
+		len = ft_strlen(&nb[i]);
+		if (len > 1 && len % 3 == 1)
+			ft_putstr_until_whitespace(search_big(dict, len));
 		i++;
 	}
 }
