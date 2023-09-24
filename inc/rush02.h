@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:57:11 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/24 14:48:46 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 15:34:40 by ylenoel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # define BUFFER_SIZE	4096
 
 int			parse(int argc, char *argv[], char **nb, int *fd);
+
+void		convert(char *dict, char *nb);
 
 char		*read_file(int fd);
 
