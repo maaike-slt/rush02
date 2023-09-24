@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 18:31:30 by ylenoel          ###   ########.fr       */
+/*   Updated: 2023/09/24 18:34:42 by ylenoel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,6 @@ void	convert(char *dict, char *nb)
 			else if (nb[i] > '1')
 			{
 				ft_putstr_until_whitespace(search_tens(dict, nb[i]));
-				i++;
-				ft_putstr_until_whitespace(search_ones(dict, nb[i]));
-
 			}
 		}
 		else
