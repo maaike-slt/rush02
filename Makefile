@@ -6,7 +6,7 @@
 #    By: msloot <msloot@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 21:30:22 by msloot            #+#    #+#              #
-#    Updated: 2023/09/24 20:56:15 by msloot           ###   ########.fr        #
+#    Updated: 2023/09/24 22:28:09 by msloot           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRCS	=	./src/main.c \
 			./src/search/search.c ./src/search/big.c ./src/search/teens.c ./src/search/tens.c ./src/search/ones.c \
 			./src/convert/convert.c ./src/convert/hundreds.c ./src/convert/tens.c ./src/convert/ones.c \
 			./src/error.c \
-			./src/utils/ft_atoll.c \
 			./src/utils/ft_strlen.c \
 			./src/utils/ft_strcpy.c ./src/utils/ft_strcat.c ./src/utils/ft_strncmp.c \
 			./src/utils/ft_strjoin.c ./src/utils/ft_strdup.c \

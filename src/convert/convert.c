@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 21:50:33 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:26:56 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,32 @@ int	convert_inner(char *dict, char *nb, size_t *i, int *print)
 	return (1);
 }
 
-int	convert(char *dict, char *nb, int print)
+size_t	skip_zero(char *nb)
 {
 	size_t	i;
+	size_t	len;
 
-	if (ft_strlen(nb) == 1 && nb[0] == '0')
-		return (convert_ones(dict, '0', 1, &print));
 	i = 0;
+	len = ft_strlen(nb);
+	while (i < len - 1 && nb[i] == '0')
+		i++;
+	return (i);
+}
+
+int	convert(char *dict, char *nb, int print)
+{
+	char	*word;
+	size_t	i;
+
+	i = skip_zero(nb);
+	if (ft_strlen(&nb[i]) == 1 && nb[i] == '0')
+	{
+		word = search_ones(dict, '0');
+		if (!word)
+			return (0);
+		if (print)
+			ft_putstr_until_whitespace(word);
+	}
 	while (nb[i] != '\0')
 	{
 		if (!convert_inner(dict, nb, &i, &print))

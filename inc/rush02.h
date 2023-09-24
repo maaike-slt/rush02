@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:57:11 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/24 21:42:43 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:28:03 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ int			convert(char *dict, char *nb, int print);
 int			convert_ones(char *dict, char c, size_t len, int *print);
 int			convert_tens(char *dict, char *nb, size_t *i, int *print);
 int			convert_hundreds(char *dict, char c, int *print);
-
-long long	ft_atoll(char *str);
 
 void		ft_putstr(char *str);
 void		ft_putstr_error(char *str);
