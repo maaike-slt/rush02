@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:57:11 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 23:52:48 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 09:50:35 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ long long	ft_atoll(char *str);
 
 void		ft_putstr(char *str);
 void		ft_putstr_error(char *str);
-void		ft_putstr_to_whitespace(char *str);
+void		ft_putstr_until_whitespace(char *str);
 void		ft_putchar(char c);
 
 int			ft_put_error(int ret);
@@ -41,7 +41,7 @@ int			ft_is_num(char c);
 int			ft_is_whitespace(char c);
 
 size_t		ft_strlen(char *str);
-size_t		ft_strlen_to_whitespace(char *str);
+size_t		ft_strlen_until_whitespace(char *str);
 
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_strcat(char *dest, char *src);
