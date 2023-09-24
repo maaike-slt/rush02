@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 21:07:46 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 21:11:47 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	convert(char *dict, char *nb, int check)
 	size_t	i;
 
 	if (ft_strlen(nb) == 1 && nb[0] == '0')
-		return (convert_ones(dict, '0', 1, check))
+		return (convert_ones(dict, '0', 1, check));
 	i = 0;
 	while (nb[i] != '\0')
 	{
