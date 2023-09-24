@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:37:47 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 21:04:23 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 21:36:22 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int	main(int argc, char *argv[])
 	close(fd);
 	if (!dict)
 		return (1);
-	if (!convert(dict, nb, 1))
+	if (!convert(dict, nb, 0))
 	{
 		free(dict);
 		return (ft_put_dict_error(1));
 	}
-	convert(dict, nb, 0);
+	convert(dict, nb, 1);
 	free(dict);
 	return (0);
 }
