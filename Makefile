@@ -6,7 +6,7 @@
 #    By: msloot <msloot@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 21:30:22 by msloot            #+#    #+#              #
-#    Updated: 2023/09/24 15:23:13 by ylenoel          ###   ########.fr        #
+#    Updated: 2023/09/24 16:32:09 by ylenoel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ RM		= 	rm -rf
 
 CFLAGS	=	-Wall -Werror -Wextra
 
-#CFLAGS	+=	-g
+CFLAGS	+=	-g
 
 INC		=	./inc/
 
