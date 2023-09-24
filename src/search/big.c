@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 23:05:10 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 23:40:58 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:47:59 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,15 @@
 // 1000000000000000000000000000000000000 is 37 length
 char	*search_big(char *dict, size_t len)
 {
-	char	s[38];
+	char	*s;
+	char	*ret;
 	size_t	i;
 
+	if (len == 0)
+		return (NULL);
+	s = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s)
+		return (NULL);
 	s[0] = '1';
 	i = 1;
 	while (i < len)
@@ -26,5 +32,7 @@ char	*search_big(char *dict, size_t len)
 		i++;
 	}
 	s[i] = '\0';
-	return (search(dict, s));
+	ret = search(dict, s);
+	free(s);
+	return (ret);
 }
