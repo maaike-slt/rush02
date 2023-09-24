@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 22:25:53 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:55:13 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	convert_ones(char *dict, char c, size_t len, int *print)
 		if (*print)
 		{
 			*print += 1;
-			ft_putstr_until_whitespace(word);
+			ft_putstr_trim(word);
 		}
 	}
 	if (len == 1)
@@ -35,7 +35,7 @@ int	convert_ones(char *dict, char c, size_t len, int *print)
 	if (*print > 1)
 	{
 		ft_putchar(' ');
-		ft_putstr_until_whitespace(word);
+		ft_putstr_trim(word);
 		*print = 1;
 	}
 	return (1);

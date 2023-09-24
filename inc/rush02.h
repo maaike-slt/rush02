@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:57:11 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/24 22:28:03 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:54:04 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int			convert_hundreds(char *dict, char c, int *print);
 
 void		ft_putstr(char *str);
 void		ft_putstr_error(char *str);
-void		ft_putstr_until_whitespace(char *str);
+void		ft_putstr_trim(char *str);
 void		ft_putchar(char c);
 
 int			ft_put_error(int ret);
@@ -46,7 +46,7 @@ int			ft_is_num(char c);
 int			ft_is_whitespace(char c);
 
 size_t		ft_strlen(char *str);
-size_t		ft_strlen_until_whitespace(char *str);
+size_t		ft_strlen_trim(char *str);
 
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_strcat(char *dest, char *src);

@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 22:26:56 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:54:30 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	convert(char *dict, char *nb, int print)
 		if (!word)
 			return (0);
 		if (print)
-			ft_putstr_until_whitespace(word);
+			ft_putstr_trim(word);
 	}
 	while (nb[i] != '\0')
 	{

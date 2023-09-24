@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 21:21:13 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/24 09:50:21 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:56:28 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,26 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-size_t	ft_strlen_until_whitespace(char *str)
+int	only_space_left(char *str)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i] && !ft_is_whitespace(str[i]))
+	while (str[i] && str[i] != '\n')
+	{
+		if (!ft_is_whitespace(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+size_t	ft_strlen_trim(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] && !only_space_left(&str[i]))
 		i++;
 	return (i);
 }

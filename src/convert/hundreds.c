@@ -6,7 +6,7 @@
 /*   By: ylenoel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 15:03:01 by ylenoel           #+#    #+#             */
-/*   Updated: 2023/09/24 21:48:26 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 22:54:44 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	convert_hundreds(char *dict, char c, int *print)
 		return (0);
 	if (*print)
 	{
-		ft_putstr_until_whitespace(word);
+		ft_putstr_trim(word);
 		ft_putchar(' ');
 		*print += 1;
 	}
@@ -31,6 +31,6 @@ int	convert_hundreds(char *dict, char c, int *print)
 	if (!word)
 		return (0);
 	if (*print)
-		ft_putstr_until_whitespace(word);
+		ft_putstr_trim(word);
 	return (1);
 }
