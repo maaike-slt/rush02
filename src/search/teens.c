@@ -6,7 +6,7 @@
 /*   By: msloot <msloot@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 23:05:10 by msloot            #+#    #+#             */
-/*   Updated: 2023/09/23 23:16:36 by msloot           ###   ########.fr       */
+/*   Updated: 2023/09/24 11:38:22 by msloot           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*search_teens(char *dict, char tens, char ones)
 {
-	char	s[2];
+	char	s[3];
 
 	s[0] = tens;
 	s[1] = ones;
